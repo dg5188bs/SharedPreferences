@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
     TextView tv;
     EditText et;
@@ -39,16 +42,31 @@ public class MainActivity extends AppCompatActivity {
         et.setText(str);
     }
 
+    /**
+     * Count.
+     *
+     * @param view the view
+     */
     public void count(View view) {
         count++;
         tv.setText(Integer.toString(count));
     }
 
+    /**
+     * Reset.
+     *
+     * @param view the view
+     */
     public void reset(View view) {
         count=0;
         tv.setText(Integer.toString(count));
     }
 
+    /**
+     * Exit.
+     *
+     * @param view the view
+     */
     public void exit(View view) {
         String st = et.getText().toString();
         settings=getSharedPreferences("PREFS_NAME",MODE_PRIVATE);
